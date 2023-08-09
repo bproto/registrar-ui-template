@@ -14,7 +14,10 @@ let press = process.argv[6];
 let zoneContract = process.argv[7];
 let basePrice = process.argv[8];
 let colorScheme = process.argv[9];
-
+let dbUrl = process.argv[10];
+let dbAdmin = process.argv[11];
+let dbCollection = process.argv[12];
+let dbPassword = process.argv[13];
 
 function getObject() {
   return colors[colorScheme] ? colors[colorScheme] : colors.BProto;
@@ -84,9 +87,13 @@ const state = reactive({
   ensTld: '${ensTld}',
   issuanceId: ${issuanceId},
   press: ${press},
-  zoneContract: ${zoneContract},
+  zoneContract: '${zoneContract}',
   // pricing in dollars
   basePrice: ${basePrice},
+  // data base
+  dbUrl: '${dbUrl}',
+  dbAdmin: '${dbAdmin}',
+  dbCollection: '${dbCollection}',
   //event-notifictaion
   errorHappened: false,
   successHappened: false,
@@ -132,6 +139,10 @@ module.exports = {
     },
     plugins: [],
 }`
+    },
+    {
+      path: '.env',
+      content: `DB_PASSWORD=${dbPassword}`
     }
   ];
 
