@@ -48,11 +48,7 @@
             class="w-8 h-8 cursor-pointer mr-5"
             @click="$emit('update-settings', !settings)"
           />
-          <Wallet
-            connect-class-properties="text-lg font-semibold hover:bg-primary dark:hover:bg-primary-dark"
-            expanded-class-properties="text-white bg-gradient-to-r dark:from-primary-start-dark dark:to-primary-end-dark from-primary-start to-primary-end relative"
-            :services="['metamask']"
-          /> 
+          <WidgetCryptoWallet />
         </div>
       </div>
 
@@ -137,11 +133,7 @@
             class="grid place-items-center w-full"
           >
             <div class="flex items-center my-5">
-              <Wallet
-                connect-class-properties="text-lg font-semibold"
-                expanded-class-properties="text-white bg-gradient-to-r dark:from-primary-start-dark dark:to-primary-end-dark from-primary-start to-primary-end relative"
-                :services="['metamask']"
-              />
+              <WidgetCryptoWallet />
             </div>
 
 

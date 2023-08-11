@@ -18,6 +18,7 @@ let dbUrl = process.argv[10];
 let dbAdmin = process.argv[11];
 let dbCollection = process.argv[12];
 let dbPassword = process.argv[13];
+let rpcUrl = process.argv[14];
 
 function getObject() {
   return colors[colorScheme] ? colors[colorScheme] : colors.BProto;
@@ -142,7 +143,8 @@ module.exports = {
     },
     {
       path: '.env',
-      content: `DB_PASSWORD=${dbPassword}`
+      content: `DB_PASSWORD=${dbPassword}
+RPC_URL=${rpcUrl}`
     }
   ];
 

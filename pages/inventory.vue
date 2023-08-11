@@ -134,13 +134,8 @@
 
 <script>
   import store from '~/store';
-  import { ArrowLeftIcon, ArrowRightIcon } from '@heroicons/vue/solid'
 
   export default {
-    components: {
-      ArrowLeftIcon,
-      ArrowRightIcon
-    },
     data(){
       return {
         ...store,
@@ -162,7 +157,7 @@
     async beforeMount() {
       if(getAccount()) {
         this.loading = true;
-        this.tree = await arrangeDomains(store.tld.value, await queryDomains("0x8cf7f8a2eb9cbf7a01dfb89f45951de4fb421d27"));//await queryDomains(getAccount()));
+        this.tree = await arrangeDomains(store.tld.value, await queryDomains(getAccount()));
         if(this.tree) {
           this.loadRoot();
         }

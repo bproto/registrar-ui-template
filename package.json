@@ -19,6 +19,7 @@
   "devDependencies": {
     "@crtxio/bproto-contract-call": "^0.0.4",
     "@crtxio/bproto-domain-lookup": "^0.0.1",
+    "@crtxio/database": "^0.0.2",
     "@crtxio/notification": "^0.0.2",
     "@crtxio/search": "^0.0.2",
     "@crtxio/wallet": "^0.0.8",

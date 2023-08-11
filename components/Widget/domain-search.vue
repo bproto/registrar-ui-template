@@ -11,11 +11,11 @@
       @update-available="updateAvailable"
     />
 
-
     <ChainSearch 
       v-else
       :tld="tld"
       :contract="zoneContract"
+      :rpc-url="rpcUrl"
       main-tw-css-classes="text-black"
       input-tw-css-classes="w-full"
       :restricted-terms="restrictedTerms" 
@@ -28,11 +28,19 @@
 
 <script>
   import store from '~/store';
+  import { useRuntimeConfig } from "#app";
 
   export default {
     emits: [
       'update-available'
     ],
+    setup() {
+      const config = useRuntimeConfig();
+
+      return {
+        rpcUrl: config.public.RPC_URL
+      }
+    },
     data() {
       return {
         ...store,

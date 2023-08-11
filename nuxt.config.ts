@@ -4,6 +4,7 @@ export default defineNuxtConfig({
   extends: [
     '@crtxio/bproto-contract-call',
     '@crtxio/bproto-domain-lookup',
+    '@crtxio/database',
     '@crtxio/wallet',
     '@crtxio/notification',
     '@crtxio/search',
@@ -14,6 +15,7 @@ export default defineNuxtConfig({
   runtimeConfig: {
     public: {
       DB_PASSWORD: process.env.DB_PASSWORD,
+      RPC_URL: process.env.RPC_URL,
     }
   }
 })
