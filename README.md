@@ -10,7 +10,7 @@ Setup the project specifications you want:
 
 ### Basic
 ```bash
-yarn setup <domain-name> <has-ens-bridge> <ens-tld> <issuance-id> <press> <zone-contract> <base-price> <color-scheme>
+yarn setup <domain-name> <has-ens-bridge> <ens-tld> <issuance-id> <press> <zone-contract> <base-price> <color-scheme> <db-url> <db-admin> <db-collection> <db-password> <rpc-url>
 ```
 
 If you want to use the standard BProto color scheme just put "".
